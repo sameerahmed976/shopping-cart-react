@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto+Mono:wght@300;400;500;600;700&display=swap");
+
+:root {
+  /* Typography */
+  --regular-font: "Lato", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+
+  --heading-font: "Roboto Mono", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    monospace, sans-serif;
+
+  --box-shadow-1: 2px 4px 6px #000;
+
+  --transition-8: all 0.8s ease-in-out;
+
+  /* --primary-color: #845ec2;
+  --background-color: #e1edf2;
+  --secondary-color: #3f87a0; */
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--regular-font);
+  font-size: 16px;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* styles */
+
+.logo__image {
+  width: 4rem;
+  height: 4rem;
+  display: block;
+  cursor: pointer;
+}
+
+.cart__logo {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  box-shadow: var(--box-shadow-1);
+  padding: 0 4rem;
+}
+
+.cart {
+  position: relative;
+}
+
+.logo__heading {
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  color: green;
+  letter-spacing: 2px;
+}
+
+.cart--count {
+  position: absolute;
+  top: -0.1rem;
+  right: -0.9rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.main__heading {
+  padding-top: 3rem;
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: green;
+}
+
+.cart__container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.cart__image {
+  display: block;
+  width: 4rem;
+  height: 5rem;
+  object-fit: cover;
+}
+
+.cart__item {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.1fr;
+  max-width: 300px;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+.cart__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.cart__title {
+  font-size: 1rem;
+}
+
+.cart__price {
+  font-size: 1rem;
+}
+
+.btn--group {
+  flex: 0 0 10%;
+}
+
+.btn--remove {
+  background-color: transparent;
+  padding: 0.2rem;
+  font-size: 1rem;
+  border: none;
+  text-transform: capitalize;
+  font-weight: bold;
+  text-align: left;
+  transition: var(--transition-8);
+}
+
+.btn--remove:hover {
+  color: red;
+}
+
+.btn {
+  display: block;
+  padding: 0.1rem;
+  background-color: transparent;
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+
+.btn--up:hover {
+  color: green;
+}
+.btn--down:hover {
+  color: red;
+}
+
+.cart__count--single {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.total__section--amount {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.total,
+.price {
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.btn--clear {
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: var(--box-shadow-1);
+  background-color: white;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  background-color: #000;
+  transition: var(--transition-8);
+  border: 1px solid black;
+  cursor: pointer;
+  margin-bottom: 3rem;
+}
+
+.btn--clear:hover,
+.btn--clear:active {
+  transform: translateY(15%);
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.cart__empty {
+  text-align: center;
+  padding-top: 5rem;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.loading {
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 4rem;
+}
+
+.btn--refresh {
+  padding: 1rem 2rem;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  display: block;
+  margin: 0 auto;
+  background-color: black;
+  color: white;
+  border-radius: 2rem;
+  border: 1px solid white;
+  margin-top: 2rem;
+  box-shadow: 1px 1px 1px 2px #000;
+  transition: var(--transition-8);
+}
+
+.btn--refresh:hover {
+  transform: translateY(15%);
+  background-color: white;
+  color: black;
+}
